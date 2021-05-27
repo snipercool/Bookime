@@ -1,0 +1,43 @@
+{
+	"name": "Bookime",
+	"version": "1.0",
+	"description": "Build an Extension!",
+	"permissions": [
+		"<all_urls>"
+	],
+	// "background": {
+	// 	"page": "background.html",
+	// 	"persistent": false
+	// },
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"include_globs": [
+			  "https://*gogoanime*.*",
+			  "http://*gogoanime*.*"
+			],
+			"js": [
+				
+			],
+			"run_at": "document_end"
+		}
+	],
+	"web_accessible_resources": [
+	    "assets/dist/images/*",
+	    "assets/dist/css/*",
+	    "assets/dist/js/*"
+  	],
+	"page_action": {
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "assets/dist/images/icon-16x16.png",
+		"48": "assets/dist/images/icon-48x48.png",
+		"128": "assets/dist/images/icon-128x128.png",
+		"180": "assets/dist/images/icon-180x180.png"
+	},
+	"manifest_version": 2,
+	"content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+}
