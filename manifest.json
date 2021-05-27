@@ -19,7 +19,7 @@
 			  "http://*gogoanime*.*"
 			],
 			"js": [
-				
+				"controllers/Init.js"
 			],
 			"run_at": "document_end"
 		}
@@ -27,7 +27,9 @@
 	"web_accessible_resources": [
 	    "assets/dist/images/*",
 	    "assets/dist/css/*",
-	    "assets/dist/js/*"
+	    "assets/dist/js/*",
+		"views/*",
+		"controllers/Iframe.js"
   	],
 	"page_action": {
 		"default_popup": "popup.html"
