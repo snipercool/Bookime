@@ -1,3 +1,6 @@
+import { initializeApp } from "firebase/app"
+import { getFirestore } from "firebase/firestore"
+
 const firebaseConfig = {
   apiKey: "AIzaSyBlzzBYLsJ_hrOvIB_X4SCpnl_31i-RP6A",
   authDomain: "bookime-38af1.firebaseapp.com",
@@ -11,3 +14,5 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+
+const db = getFirestore();
