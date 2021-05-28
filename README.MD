@@ -47,6 +47,6 @@ Nicolas Vanhuynegem <b>-</b> [LinkedIn](https://www.linkedin.com/in/nicolas-vanh
 Lars Pauwels <b>-</b> [LinkedIn](https://www.linkedin.com/in/lars-pauwels/) <b>-</b> [Github](https://github.com/LarsPauwels) <b>-</b> [Website](https://myware.be/)
 
 ## Donations
-AssistantComputerControl is made by me, Albert, from Denmark, who enjoys developing it as a free time project. The project will remain free, but donations are welcomed as there are expenses such as hosting and the domain.
+Bookime is a free product made by Nicolas and Lars, who enjoys developing it as a free time project. The project will remain free, but donations are welcomed as there are expenses such as putting extention online.
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/bookime)

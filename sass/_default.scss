@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'anime-ace';
+  src: url('../fonts/anime-ace.regular.ttf')  format('truetype');
+}
+
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: table;
+}
