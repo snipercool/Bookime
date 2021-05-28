@@ -1,0 +1,65 @@
+&__card {
+	width: 350px;
+	height: 652px;
+	background: $white;
+	border-radius: 10px;
+	position: fixed;
+	top: 50px;
+	right: -350px;
+	z-index: 99999999;
+	transition: all 0.5s ease;
+	box-shadow: 0 0 10px rgba(0,0,0,.2);
+
+	&--active {
+  		right: 20px;
+  	}
+
+  	&__btn {
+  		z-index: 999;
+		left: -50px;
+	  	top: 20px;
+	  	position: absolute;
+	  	user-select: none;
+	  	transition: all 0.3s ease;
+
+	  	&__inner {
+	  		cursor: pointer;
+	  		display: flex;
+	  		touch-action: manipulation;
+
+	  		&__icon {
+	  			height: 50px;
+
+			    &--logo {
+			    	background-image: url(chrome-extension://__MSG_@@extension_id__/assets/dist/images/bookime_head.svg);
+				    background-repeat: no-repeat;
+				    background-size: 85% auto;
+				    background-position: 50%;
+				    width: 50px;
+				    border-radius: 5px 0 0 5px;
+				    background-color: $white;
+			    }
+
+			    &--expand {
+			    	display: none;
+			    	background-color: $primary;
+				    width: 25px;
+				    position: relative;
+
+				    &:after {
+					    content: "";
+					    width: 10px;
+					    height: 10px;
+					    display: block;
+					    background-image: url(chrome-extension://__MSG_@@extension_id__/assets/dist/images/fullscreen.svg);
+					    background-size: cover;
+					    position: absolute;
+					    top: 50%;
+					    left: 50%;
+					    transform: translate(-50%, -50%);
+					}
+			    }
+	  		}
+	  	}
+  	}
+}

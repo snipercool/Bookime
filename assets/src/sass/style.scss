@@ -1,0 +1,9 @@
+//Standerds
+@import 'variables';
+@import 'default';
+
+//Components
+.bookime {
+	@import 'components/iframe';
+	@import 'components/card';
+}

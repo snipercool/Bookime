@@ -46,7 +46,7 @@ function minifyJs(done) {
   done();
 }
 
-watch("./assets/src/sass/**/*.scss", sass2css);
+watch("./assets/src/sass/**", sass2css);
 watch("./assets/src/images/*", compressImages);
 watch("./assets/src/js/*", minifyJs);
 
