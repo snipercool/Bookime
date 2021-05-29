@@ -28,6 +28,7 @@
 	    "assets/dist/images/*",
 	    "assets/dist/css/*",
 	    "assets/dist/js/*",
+	    "assets/dist/fonts/*",
 		"views/*",
 		"controllers/Iframe.js"
   	],

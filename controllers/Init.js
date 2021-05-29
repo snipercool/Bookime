@@ -12,7 +12,7 @@ class Init {
         const style = document.createElement('link');
         style.type = "text/css"; 
         style.rel = "stylesheet";
-        style.href = `${this.origin}/assets/dist/css/style.min.css`;
+        style.href = `${this.origin}/assets/dist/css/page.min.css`;
         document.head.appendChild(style);
     }
 

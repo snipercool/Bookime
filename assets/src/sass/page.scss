@@ -1,8 +1,8 @@
 //Standerds
 @import 'variables';
-@import 'default';
 
 //Components
 .bookime {
-	@import 'components/header';
+	@import 'components/iframe';
+	@import 'components/card';
 }

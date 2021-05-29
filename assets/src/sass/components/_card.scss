@@ -7,11 +7,19 @@
 	top: 50px;
 	right: -350px;
 	z-index: 99999999;
-	transition: all 0.5s ease;
+	transition: all 0.3s ease;
 	box-shadow: 0 0 10px rgba(0,0,0,.2);
 
 	&--active {
   		right: 20px;
+  	}
+
+  	&--dark {
+  		background-color: $dark;
+
+  		.bookime__card__btn__inner__icon--logo {
+  			background-color: $dark;
+  		}
   	}
 
   	&__btn {
@@ -38,6 +46,7 @@
 				    width: 50px;
 				    border-radius: 5px 0 0 5px;
 				    background-color: $white;
+				    transition: all 0.3s ease;
 			    }
 
 			    &--expand {
@@ -63,3 +72,28 @@
 	  	}
   	}
 }
+
+@keyframes drip_one{
+  from{top:0;}
+  to{top:103%;}
+  }  
+@keyframes drip_two{
+  from{top:0;}
+  to{top:104%;}
+  }
+@keyframes drip_three{
+  from{top:0;height:52px;}
+  to{top:102%;height:132px;}
+  } 
+@keyframes drip_four{
+  from{top:0;width:65px;height:30px;}
+  to{top:102%;width:75px;height:45px;}
+  } 
+@keyframes drip_five{
+  from{top:0;height:30px;}
+  to{top:102%;height:72px;}
+  } 
+@keyframes liquid{
+  from{height:15px;}
+  to{height:109%;}
+  }

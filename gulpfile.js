@@ -12,9 +12,11 @@ const browserSync = require('browser-sync').create();
  */
 
 function sass2css(done) {
-  src("./assets/src/sass/style.scss")
+  src(["./assets/src/sass/style.scss", "./assets/src/sass/page.scss"])
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-    .pipe(rename('style.min.css'))
+    .pipe(rename(function(path) {
+        path.basename += ".min";
+      }))
     .pipe(dest("./assets/dist/css/"))
     .pipe(browserSync.stream());
   done();

@@ -1,0 +1,37 @@
+&__header {
+  font-family: $manga;
+	border-bottom: 1px solid rgba(205,212,226,.5);
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+  	font-size: 28px;
+    text-align: center;
+    color: $primary;
+  }
+
+  &__options {
+  	position: absolute;
+  	right: 10px;
+  	top: 16px;
+  	cursor: pointer;
+  	height: 25px;
+  	padding: 0 5px;
+  	display: flex;
+ 	 	align-items: center;
+
+ 	 	&__theme {
+      height: 20px;
+ 	 	}
+
+    &__close {
+      height: 10px;
+      width: 12px;
+      margin-left: 10px;
+    }
+  }
+}
