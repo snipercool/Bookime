@@ -43,9 +43,10 @@ border-bottom-right-radius: 10px;
                     transform: translate(0%, 0%) translateZ(0);
                 }
 
-                .bookime__footer__navigation__link__icon {
-                    fill: #fff;
-                    color: #fff;
+                .bookime__footer__navigation__link__icon svg{
+                    fill: #fff !important;
+                    color: #fff !important;
+                    z-index: 1;
                 }
                 }
             }
