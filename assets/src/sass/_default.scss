@@ -11,5 +11,31 @@
 
 html,
 body {
-	overflow-x: hidden;
+	overflow: hidden;
 }
+
+//scrollbar
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+  background: var(--theme); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(205,212,226,.5); 
+    transition: all 0.3s ease;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: rgba(205,212,226,.7); 
+  }
+
+  svg {
+    fill: $primary;
+  }
