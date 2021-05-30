@@ -11,4 +11,7 @@
 //pages
 .bookime {
 	@import 'pages/home';
+	@import 'pages/auth';
+	@import 'pages/list';
+	@import 'pages/account';
 }

@@ -1,17 +1,40 @@
-<div class="bookime__auth__login__title">LOGIN</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookime - Home</title>
+    <link rel="stylesheet" type="text/css" href="../assets/dist/css/style.min.css">
+  </head>
+  <body>
 
-<div class="bookime__auth__login__row">
- 	<input type="text" name="name" id="name" class="bookime__auth__login__row__input">
- 	<label for="name" class="bookime__auth__login__row__label">Username</label>
-</div>
+	<div class="bookime__auth">
+		<div>
+		<div class="tab">
+			<button class="tablink active" id="LoginBtn">Login</button>
+			<button class="tablink" id="RegisterBtn">Register</button>
+		</div>
+		<div id="Login" class="tabcontent">
+			<form action="" method="post">
+				<input type="text" name="usernmae" id="username" required autocomplete="off">
+				<label for="username"><span class="content-name">Username</span></label>
 
-<div class="bookime__auth__login__row">
- 	<input type="password" name="password" id="password" class="bookime__auth__login__row__input">
- 	<label for="password" class="bookime__auth__login__row__label">Password</label>
-</div>
+				<input type="password" name="password" id="password" required autocomplete="off">
+				<label for="password"><span class="content-name">Password</span></label>
+			</form>
+		</div>
+		<div id="Register" class="tabcontent">
+			<form action="" method="post">
+				<input type="text" name="usernmae" id="username" required autocomplete="off">
+				<label for="username"><span class="content-name">Username</span></label>
 
-<div class="bookime__auth__login__row bookime__auth__login__row--border">
-	<div class="bookime__auth__btn">
-		<span class="bookime__auth__btn__text">GO</span>
+				<input type="password" name="password" id="password" required autocomplete="off">
+				<label for="password"><span class="content-name">Password</span></label>
+
+				<input type="email" name="email" id="email" required autocomplete="off">
+				<label for="email"><span class="content-name">Email</span></label>
+			</form>
+		</div>
+		</div>
 	</div>
-</div>
+	<script src="../assets/src/js/tabs.js"></script>
+  </body>
+</html>

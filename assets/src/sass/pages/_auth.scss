@@ -1,0 +1,41 @@
+&__auth{
+    display: grid;
+    height: calc(100vh - 48px);
+    overflow: hidden;
+    place-items: center;
+    margin: 2em;
+
+    & .tab{
+        overflow: hidden;
+
+        & button{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid mix($primary, #FFF, 50%);
+            padding: 0.75em 0.75em 0.25em 0.5em;
+            width: 100px;
+            font-size: 2em;
+            text-align: left;
+            color: mix($primary, #FFF, 50%);
+            font-family: $manga;
+            transition: all 0.3s ease;
+
+            &:hover{
+                border-bottom: 2px solid $primary;
+                color: $primary;
+            }
+
+            &.active{
+                color: $primary;
+                border-bottom: 2px solid $primary;
+            }
+        }
+    }
+
+    & .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+}
