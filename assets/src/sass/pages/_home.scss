@@ -1,0 +1,16 @@
+&__sidebar__content{
+    display: grid;
+    place-items: center;
+    margin: 10px;
+    margin-top: 2rem;
+    &__empty {
+        width: 70%;
+        margin: auto;
+    }
+    &__title{
+        font-family: $manga;
+        color: $primary;
+        font-size: 2em;
+        text-align: center;
+    }
+}

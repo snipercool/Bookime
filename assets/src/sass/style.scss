@@ -5,4 +5,10 @@
 //Components
 .bookime {
 	@import 'components/header';
+	@import 'components/footer';
+}
+
+//pages
+.bookime {
+	@import 'pages/home';
 }

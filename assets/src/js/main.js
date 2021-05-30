@@ -23,13 +23,5 @@ eventer(messageEvent, function (e) {
 		sidebar.classList.remove("bookime__card--active");
 		active = false;
 	}
-
-	if (e.data === "light" || e.message === "light") {
-		sidebar.classList.remove("bookime__card--dark");
-	}
-
-	if (e.data === "dark" || e.message === "dark") {
-		sidebar.classList.add("bookime__card--dark");
-	}
 	
 });

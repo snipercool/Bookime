@@ -1,7 +1,8 @@
 &__card {
 	width: 350px;
 	height: 652px;
-	background: $white;
+	background: var(--theme);
+	transition: background 0.3s ease-in-out;	
 	border-radius: 10px;
 	position: fixed;
 	top: 50px;
@@ -12,14 +13,6 @@
 
 	&--active {
   		right: 20px;
-  	}
-
-  	&--dark {
-  		background-color: $dark;
-
-  		.bookime__card__btn__inner__icon--logo {
-  			background-color: $dark;
-  		}
   	}
 
   	&__btn {
@@ -45,7 +38,7 @@
 				    background-position: 50%;
 				    width: 50px;
 				    border-radius: 5px 0 0 5px;
-				    background-color: $white;
+				    background-color: var(--theme);
 				    transition: all 0.3s ease;
 			    }
 

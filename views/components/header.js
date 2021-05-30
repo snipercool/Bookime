@@ -31,16 +31,27 @@ close.addEventListener("click", function() {
 
 /* Change Theme (Dark mode & Light mode) */
 const theme = document.getElementById("bookimeTheme");
+const themeMap = {
+    dark: "light",
+    light: "dark"
+};
 
-let light = true;
+const Btheme = localStorage.getItem('bookime-theme')
+  || (tmp = Object.keys(themeMap)[0],
+      localStorage.setItem('bookime-theme', tmp),
+      tmp);
+const sidebar = document.getElementById('bookimeSidebar').classList;
+sidebar.add(Btheme);
+
 theme.addEventListener("click", function() {
-  if (light) {
-    parent.postMessage("dark", "*");
+    const current = localStorage.getItem('bookime-theme');
+    const next = themeMap[current];
+    sidebar.replace(current, next);
+    localStorage.setItem('bookime-theme', next);
+  if (current == "light") {
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/moon.png`;
   } else {
-    parent.postMessage("light", "*");
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/sun.png`;
   }
 
-  light = !light;
 });

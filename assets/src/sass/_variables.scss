@@ -1,7 +1,7 @@
 //Colors
 $primary: #EF4470;
 $white: #fff;
-$dark: #373737;
+$theme: #373737;
 
 //Breakpoints
 $breakpoint-xs: 0;
@@ -13,3 +13,15 @@ $breakpoint-xxl: 1600px;
 
 //Font Families
 $manga: "manga", sans-serif;
+
+:root{
+    --theme: #373737;
+}
+
+.dark{
+	--theme: #373737;
+}
+
+.light{
+	--theme: #FFF;
+}
