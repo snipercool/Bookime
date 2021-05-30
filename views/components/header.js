@@ -36,23 +36,18 @@ const themeMap = {
     light: "dark"
 };
 
-const Btheme = localStorage.getItem('bookime-theme')
-  || (tmp = Object.keys(themeMap)[0],
-      localStorage.setItem('bookime-theme', tmp),
-      tmp);
-const bodyClass = document.body.classList;
-bodyClass.add(Btheme);
 
 if (localStorage.getItem('bookime-theme') == "dark") {
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/moon.png`;
+    parent.postMessage("dark", "*");
   } else {
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/sun.png`;
+    parent.postMessage("light", "*");
   }
 
 theme.addEventListener("click", function() {
     const current = localStorage.getItem('bookime-theme');
     const next = themeMap[current];
-    bodyClass.replace(current, next);
     localStorage.setItem('bookime-theme', next);
   if (current == "light") {
     parent.postMessage("dark", "*");

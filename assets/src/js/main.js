@@ -24,4 +24,13 @@ eventer(messageEvent, function (e) {
 		active = false;
 	}
 	
+	if (e.data === "light" || e.message === "light") {
+		sidebar.classList.remove("dark");
+		sidebar.classList.add("light");
+	}
+
+	if (e.data === "dark" || e.message === "dark") {
+		sidebar.classList.remove("light");
+		sidebar.classList.add("dark");
+	}
 });

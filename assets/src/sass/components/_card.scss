@@ -1,14 +1,13 @@
 &__card {
 	width: 350px;
 	height: 652px;
-	background: var(--theme);
-	transition: background 0.3s ease-in-out;	
+	background-color: var(--theme);
 	border-radius: 10px;
 	position: fixed;
 	top: 50px;
 	right: -350px;
 	z-index: 99999999;
-	transition: all 0.3s ease;
+	transition: all 0.6s ease;
 	box-shadow: 0 0 10px rgba(0,0,0,.2);
 
 	&--active {
