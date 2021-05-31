@@ -36,19 +36,19 @@ const themeMap = {
     light: "dark"
 };
 
-
 if (localStorage.getItem('bookime-theme') == "dark") {
-    theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/moon.png`;
-    parent.postMessage("dark", "*");
-  } else {
-    theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/sun.png`;
-    parent.postMessage("light", "*");
-  }
+  theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/moon.png`;
+  parent.postMessage("dark", "*");
+} else {
+  theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/sun.png`;
+  parent.postMessage("light", "*");
+}
 
 theme.addEventListener("click", function() {
-    const current = localStorage.getItem('bookime-theme');
-    const next = themeMap[current];
-    localStorage.setItem('bookime-theme', next);
+  const current = localStorage.getItem('bookime-theme') !== null ? localStorage.getItem('bookime-theme') : "light";
+  const next = themeMap[current];
+  localStorage.setItem('bookime-theme', next);
+
   if (current == "light") {
     parent.postMessage("dark", "*");
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/moon.png`;
@@ -56,5 +56,4 @@ theme.addEventListener("click", function() {
     parent.postMessage("light", "*");
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/sun.png`;
   }
-
 });
