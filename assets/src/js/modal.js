@@ -4,7 +4,18 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let anime of animes) {
         anime.addEventListener('click', (e) => {
             const et = e.target.closest('.bookime__content__animeList__loop--item');
-
+            let image = et.dataset.image;
+            let title = et.dataset.title;
+            let year = et.dataset.year;
+            let exerpt = et.dataset.exerpt;
+            let genre = et.dataset.genre;
+            let slug = et.dataset.slug;
+            modal.getElementsByClassName("badge").textContent = genre;
+            modal.getElementsByClassName("modal-title--text").textContent = title + "(" + year + ")";
+            modal.getElementsByClassName("modal-exerpt").textContent = exerpt;
+            document.getElementById("link-facebook").setAttribute("href","https://www.facebook.com/sharer/sharer.php?u=https://www1.gogoanime.ai/category/" + slug);
+            document.getElementById("link-twitter").setAttribute("href","https://twitter.com/intent/tweet?url=https://www1.gogoanime.ai/category/" + slug );
+            modal.getElementsByClassName("modal-image").src = image;
             modal.classList.add("active");
             
         })
