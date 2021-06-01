@@ -30,6 +30,14 @@ border-bottom-right-radius: 10px;
         align-items: center;
         overflow: hidden;
         transition: all 0.3s ease;
+        & a{
+            height: 100%;
+            width: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
         &:first-child{
             border-bottom-left-radius: 10px;
         }
