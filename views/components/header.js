@@ -45,7 +45,7 @@ if (localStorage.getItem('bookime-theme') == "dark") {
 }
 
 theme.addEventListener("click", function() {
-  const current = localStorage.getItem('bookime-theme') !== null ? localStorage.getItem('bookime-theme') : "light";
+  const current = localStorage.getItem('bookime-theme') !== "undefined" ? localStorage.getItem('bookime-theme') : "light";
   const next = themeMap[current];
   localStorage.setItem('bookime-theme', next);
 

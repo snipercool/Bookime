@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bookime - Home</title>
+    <link rel="stylesheet" type="text/css" href="../assets/dist/css/style.min.css">
+    <script src="./components/header.js" type="text/javascript" defer></script>
+    <script src="./components/footer.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+
+    <header-component></header-component>
+
+    <div class="bookime__content">
+        <div class="share">
+            <form action="" method="post" class="form">
+                <div class="input-group">
+                    <input type="email" name="email" id="email" required autocomplete="off">
+                    <label for="email" class="label-name"><span class="content-name">Email</span></label>
+                </div>
+
+                <div class="input-group auth--submit">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+            <div class="hr"></div>
+            <div class="input-group">
+                <input type="hidden" name="animeLink" id="animeLink" value="<!-- Insert tab link -->">
+                <button id="CopyBtn">Copy Anime link</button>
+            </div>
+        </div>
+    </div>
+
+    <footer-component></footer-component>
+    <script src="../assets/src/js/copy.js"></script>
+
+</body>
+
+</html>

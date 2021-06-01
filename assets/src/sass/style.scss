@@ -7,11 +7,12 @@
 	@import 'components/header';
 	@import 'components/footer';
 }
-
+@import 'components/form';
 //pages
 .bookime {
 	@import 'pages/home';
 	@import 'pages/auth';
 	@import 'pages/list';
 	@import 'pages/account';
+	@import 'pages/together';
 }
