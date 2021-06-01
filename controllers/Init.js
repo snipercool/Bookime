@@ -39,7 +39,7 @@ class Init {
 
     addIframe() {
         const iframe = document.createElement('iframe');
-        iframe.src = chrome.runtime.getURL('views/together.html');
+        iframe.src = chrome.runtime.getURL('views/account.html');
         iframe.classList.add("bookime__iframe");
         document.getElementById("bookimeSidebar").appendChild(iframe);
     }
