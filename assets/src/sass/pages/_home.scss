@@ -21,7 +21,7 @@
             text-align: end;
             margin-right: 20px;
             & p{
-                display: flex;
+                display: inline-flex;
                 align-items: center;
                 justify-content: flex-end;
                 text-transform: uppercase;
@@ -39,7 +39,7 @@
             }
 
             & p:hover + &__overlay, &__overlay:hover{
-                display: block;  
+                right: 30px;
                 opacity: 1;
             }
 
@@ -48,9 +48,8 @@
                 width: fit-content;
                 position: absolute;
                 background-color: #EEE;
-                display: none;
                 opacity: 0;
-                right: 30px;
+                right: -930px;
                 transition: opacity 0.6s ease;
                 z-index: 5;
                 & ul li{
