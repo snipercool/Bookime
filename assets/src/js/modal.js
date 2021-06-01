@@ -10,12 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
             let exerpt = et.dataset.exerpt;
             let genre = et.dataset.genre;
             let slug = et.dataset.slug;
-            modal.getElementsByClassName("badge").textContent = genre;
-            modal.getElementsByClassName("modal-title--text").textContent = title + "(" + year + ")";
-            modal.getElementsByClassName("modal-exerpt").textContent = exerpt;
+            console.log(modal.getElementsByClassName("modal-title--text"));
+            modal.getElementsByClassName("badge")[0].innerHTML  = genre;
+            modal.getElementsByClassName("modal-title--text")[0].innerHTML  = title + "(" + year + ")";
+            modal.getElementsByClassName("modal-exerpt")[0].innerHTML  = exerpt;
             document.getElementById("link-facebook").setAttribute("href","https://www.facebook.com/sharer/sharer.php?u=https://www1.gogoanime.ai/category/" + slug);
             document.getElementById("link-twitter").setAttribute("href","https://twitter.com/intent/tweet?url=https://www1.gogoanime.ai/category/" + slug );
-            modal.getElementsByClassName("modal-image").src = image;
+            modal.getElementsByClassName("modal-image")[0].src = image;
             modal.classList.add("active");
             
         })
