@@ -27,11 +27,25 @@ body {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgba(205,212,226,.5); 
+    background: rgba(212, 212, 212, 0.5); 
     transition: all 0.3s ease;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-	background: rgba(205,212,226,.7); 
+	background: rgba(176, 182, 192, 0.7); 
   }
+
+  .badge{
+    display: inline-block;
+    padding: 0.25em 0.4em;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+    background-color: $white;
+    color: $primary;
+    margin: 0 1em;
+}

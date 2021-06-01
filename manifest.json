@@ -1,7 +1,7 @@
 {
 	"name": "Bookime",
 	"version": "1.0",
-	"description": "Build an Extension!",
+	"description": "Keep track of your animes! The ones you have watched, are watching, or haven't watched yet.",
 	"permissions": [
 		"<all_urls>"
 	],
