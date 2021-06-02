@@ -61,6 +61,7 @@
                 padding-top: 20px;
                 outline: none;
                 border: none;
+                background-color: transparent;
                 &:focus + .label-name .content-name,
                 &:valid + .label-name .content-name{
                     transform: translateY(-100%);
