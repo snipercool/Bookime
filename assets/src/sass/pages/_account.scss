@@ -24,15 +24,13 @@
                     & .loop-content{
                         width: 100%;
                         padding-right: 10px;
+                        cursor: pointer;
                         & .loop-title{
                             display: flex;
                             justify-content: space-between;
                             font-size: 1.3em;
                             font-weight: bold;
                             color: $primary;
-                            & span{
-                                cursor: pointer;
-                            }
                         }
                         & .loop-body{
                             margin-top: 5px;
