@@ -24,7 +24,7 @@ customElements.define('header-component', Header);
 
 /* Close the sidebar with the cross icon */
 const close = document.getElementById("bookimeClose");
-
+document.addEventListener('DOMContentLoaded', function () {
 close.addEventListener("click", function() {
   parent.postMessage("close", "*");
 });
@@ -57,3 +57,4 @@ theme.addEventListener("click", function() {
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/sun.png`;
   }
 });
+})
