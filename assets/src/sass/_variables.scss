@@ -2,6 +2,8 @@
 $primary: #EF4470;
 $white: #fff;
 $theme: #373737;
+$primary-dark:mix($primary, #000, 85%);
+$primary-light:mix($primary, #FFF, 65%);
 
 //Breakpoints
 $breakpoint-xs: 0;

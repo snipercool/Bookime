@@ -34,7 +34,7 @@
                         }
                         & .loop-body{
                             margin-top: 5px;
-                            color: mix($primary, $white, 30%);
+                            color: $primary-light;
                             font-size: 1.1em;
                         }
                     }
@@ -44,7 +44,7 @@
                 margin: 1em 0;
                 margin-left: 50px;
                 height: 2px;
-                background-color: mix($primary, $white, 20%);
+                background-color: $primary-light;
             }
         }
         &__faq{
