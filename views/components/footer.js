@@ -24,5 +24,13 @@ class Footer extends HTMLElement {
       `;
     }
   }
+
+  var links = document.querySelectorAll(".bookime__footer__navigation__link a");
+  for( let link of links){
+    link.addEventListener("click", function(e){
+      document.querySelectorAll(".bookime__footer__navigation__link").classList.remove("active");
+      e.target.closest(".bookime__footer__navigation__link").classList.add("active");
+    })
+  }
   
   customElements.define('footer-component', Footer);
