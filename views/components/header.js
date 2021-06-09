@@ -19,42 +19,44 @@ class Header extends HTMLElement {
     `;
   }
 }
-  
+
 customElements.define('header-component', Header);
 
 /* Close the sidebar with the cross icon */
 const close = document.getElementById("bookimeClose");
 document.addEventListener('DOMContentLoaded', function () {
-close.addEventListener("click", function() {
-  parent.postMessage("close", "*");
-});
+  close.addEventListener("click", function () {
+    parent.postMessage("close", "*");
+  });
 
-/* Change Theme (Dark mode & Light mode) */
-const theme = document.getElementById("bookimeTheme");
-const themeMap = {
-    dark: "light",
-    light: "dark"
-};
+  /* Change Theme (Dark mode & Light mode) */
+  const theme = document.getElementById("bookimeTheme");
+  let darkmode = localStorage.getItem('bookime-theme');
 
-if (localStorage.getItem('bookime-theme') == "dark") {
-  theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/moon.png`;
-  parent.postMessage("dark", "*");
-} else {
-  theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/sun.png`;
-  parent.postMessage("light", "*");
-}
-
-theme.addEventListener("click", function() {
-  const current = localStorage.getItem('bookime-theme') !== "undefined" ? localStorage.getItem('bookime-theme') : "light";
-  const next = themeMap[current];
-  localStorage.setItem('bookime-theme', next);
-
-  if (current == "light") {
+  const enableDarkmode = function () {
+    document.body.classList.add("dark");
     parent.postMessage("dark", "*");
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/moon.png`;
-  } else {
+    localStorage.setItem('bookime-theme', "enabled");
+  }
+
+  const disableDarkmode = function () {
+    document.body.classList.remove("dark");
     parent.postMessage("light", "*");
     theme.src = `chrome-extension://${chrome.runtime.id}/assets/dist/images/sun.png`;
+    localStorage.setItem('bookime-theme', null);
   }
+
+  if (darkmode === 'enabled') {
+    enableDarkmode();
+  }
+
+  theme.addEventListener("click", function () {
+    darkmode = localStorage.getItem('bookime-theme');
+    if (darkmode !== 'enabled') {
+      enableDarkmode();
+    } else {
+      disableDarkmode();
+    }
+  });
 });
-})

@@ -27,3 +27,9 @@ $manga: "manga", sans-serif;
 .light{
 	--theme: #FFF;
 }
+
+@media (prefers-color-sheme: dark) {
+	:root{
+		--theme: #373737;
+	}
+}
