@@ -91,6 +91,13 @@
                             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                             font-size: 1.7em;
                             transition: all 0.6s ease;
+                            transform-origin: 10px 25px;
+                            svg{
+                                height: 20px;
+                                width: 20px;
+                                position: relative;
+                                top: -5px;
+                            }
                         }
                     }
                     & .antwoord{
