@@ -18,18 +18,20 @@ $manga: "manga", sans-serif;
 
 :root{
     --theme: #FFF;
+	--text: #000;
+	--hover: rgb(240, 240, 240);
 }
 
 .dark{
 	--theme: #373737;
-}
-
-.light{
-	--theme: #FFF;
+	--text: #fff;
+	--hover: #585858;
 }
 
 @media (prefers-color-sheme: dark) {
 	:root{
 		--theme: #373737;
+		--text: #fff;
+		--hover: #585858;
 	}
 }
