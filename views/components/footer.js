@@ -50,6 +50,6 @@ class Footer extends HTMLElement {
     if (link.classList.contains("active")) links.classList.remove("active");
   }
 
-  console.log(navId);
-  console.log(document.getElementById(`${navId}`));
+  //console.log(navId);
+  //console.log(document.getElementById(`${navId}`));
   if (navId) document.getElementById(`${navId}`).classList.add("active");
