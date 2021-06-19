@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let loop = document.querySelector('.bookime__content__animeList__loop');
-    const loadmore = document.querySelector('.loadmore');
+    const loadmore = document.querySelector('.loadmore__loading');
+    const loadBtn = document.querySelector('.loadmore__btn');
     loadmore.style.display = 'none';
+    let offset = 0
     function getAnimes(offset) {
         let baseUrl = `https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=${offset}`;
         console.log(baseUrl);
@@ -65,18 +66,15 @@ document.addEventListener('DOMContentLoaded', function () {
         return str.split(' ').splice(0, no_words).join(' ');
     }
 
-    getAnimes(0);
+    getAnimes(offset);
 
-    window.addEventListener('scroll', function() {
-        console.log(window.scrollY);
-        if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-            console.log('hello');
-            loadmore.getElementsByClassName.display = 'inline-block';
-            let offset = loop.dataset.offset;
-            getAnimes(offset);
-            loadmore.getElementsByClassName.display = 'none';
-
-        }
+    loadBtn.addEventListener('click', function() {
+            loadBtn.style.display = 'none';
+            loadmore.style.display = 'inline-block';
+            offset += 20;
+            setTimeout(function(){getAnimes(offset);}, 3000);
+            setTimeout(function(){loadBtn.style.display = 'inline-block';}, 4000);
+            setTimeout(function(){loadmore.style.display = 'none';}, 4000);
     });
 });
 
