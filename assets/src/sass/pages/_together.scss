@@ -170,6 +170,20 @@
                 }
             }
         }
+        .submitBtn{
+                display: table;
+                background: $primary;
+                box-shadow: 0 4px 20px rgba($primary, .15);
+                line-height: 20px;
+                padding: 12px;
+                border-radius: 22px;
+                color: #fff;
+                font-weight: 500;
+                cursor: pointer;
+                transition: transform .2s ease, background .3s ease, box-shadow .3s ease;
+                margin-top: 2em;
+                text-decoration: none;
+        }
         
         @keyframes turn {
             100% {

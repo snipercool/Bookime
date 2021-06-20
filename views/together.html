@@ -14,16 +14,13 @@
 
     <div class="bookime__content">
         <div class="share">
-            <form action="" method="post" class="form">
-                <div class="input-group">
-                    <input type="email" name="email" id="email" required autocomplete="off">
-                    <label for="email" class="label-name"><span class="content-name">Email</span></label>
-                </div>
-
-                <div class="input-group auth--submit">
-                    <button type="submit">Send</button>
-                </div>
-            </form>
+            <div class="input-group">
+            <input type="email" name="email" id="email" placeholder="John.Doe@hotmail.com">
+            <label for="email" class="label-name"><span class="content-name">Email</span></label>
+            </div>
+            <a href="" class="submitBtn px-2 mb-1">
+                Send
+            </a>
             <div class="hr"></div>
             <input type="hidden" name="animeLink" id="animeLink" value=" <!-- Insert tab link -->">
             <a class="activate">
@@ -61,6 +58,7 @@
 
     <footer-component></footer-component>
     <script src="../assets/src/js/copy.js"></script>
+    <script src="../assets/src/js/mailto.js"></script>
 
 </body>
 
